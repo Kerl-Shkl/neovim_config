@@ -61,4 +61,5 @@ require("lazy").setup({
         -- build = "make install_jsregexp" -- install jsregexp (optional!).
     },
     { 'voldikss/vim-floaterm'},
+    { 'google/vim-searchindex' },
 })
