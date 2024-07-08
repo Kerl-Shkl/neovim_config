@@ -10,20 +10,10 @@ vim.fn.sign_define("DiagnosticSignHint",
 {text = "󰌵", texthl = "DiagnosticSignHint"})
 
 require("neo-tree").setup({
-  close_if_last_window = false, -- Close Neo-tree if it is the last window left in the tab
+  close_if_last_window = true, -- Close Neo-tree if it is the last window left in the tab
   popup_border_style = "rounded",
   enable_git_status = true,
-  enable_diagnostics = true,
-  -- event_handlers = {
-  --     {
-  --         event = "neo_tree_popup_input_ready",
-  --         ---@param args { bufnr: integer, winid: integer }
-  --         handler = function(args)
-  --             vim.cmd("stopinsert")
-  --             vim.keymap.set("i", "<esc>", vim.cmd.stopinsert, { noremap = true, buffer = args.bufnr })
-  --         end,
-  --     }
-  -- },
+  enable_diagnostics = false,
   open_files_do_not_replace_types = { "terminal", "trouble", "qf" }, -- when opening files, do not use windows containing these filetypes or buftypes
   sort_case_insensitive = false, -- used when sorting files and directories in the tree
   sort_function = nil , -- use a custom function for sorting files and directories in the tree
@@ -87,19 +77,19 @@ require("neo-tree").setup({
     },
     -- If you don't want to use these columns, you can set `enabled = false` for each of them individually
     file_size = {
-      enabled = true,
+      enabled = false,
       required_width = 64, -- min width of window required to show this column
     },
     type = {
-      enabled = true,
+      enabled = false,
       required_width = 122, -- min width of window required to show this column
     },
     last_modified = {
-      enabled = true,
+      enabled = false,
       required_width = 88, -- min width of window required to show this column
     },
     created = {
-      enabled = true,
+      enabled = false,
       required_width = 110, -- min width of window required to show this column
     },
     symlink_target = {
@@ -112,7 +102,7 @@ require("neo-tree").setup({
   commands = {},
   window = {
     position = "left",
-    width = 40,
+    width = 30,
     mapping_options = {
       noremap = true,
       nowait = true,
@@ -140,8 +130,8 @@ require("neo-tree").setup({
       --["P"] = "toggle_preview", -- enter preview mode, which shows the current node without focusing
       ["C"] = "close_node",
       ["h"] = "close_node",
-      -- ['C'] = 'close_all_subnodes',
-      ["z"] = "close_all_nodes",
+          -- ['C'] = 'close_all_subnodes',
+          ["C"] = "close_all_nodes",
       --["Z"] = "expand_all_nodes",
       ["a"] = {
         "add",
@@ -199,7 +189,7 @@ require("neo-tree").setup({
       },
     },
     follow_current_file = {
-      enabled = false, -- This will find and focus the file in the active buffer every time
+      enabled = true, -- This will find and focus the file in the active buffer every time
       --               -- the current file is changed while the tree is open.
       leave_dirs_open = false, -- `false` closes auto expanded dirs, such as with `:Neotree reveal`
     },
