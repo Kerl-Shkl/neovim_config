@@ -1,6 +1,6 @@
 -- Setup language servers.
 local lspconfig = require('lspconfig')
-lspconfig.pyright.setup {}
+-- lspconfig.pyright.setup {}
 lspconfig.clangd.setup {}
 lspconfig.cmake.setup {}
 util = require "lspconfig/util"
@@ -17,6 +17,7 @@ lspconfig.gopls.setup {
         },
     },
 }
+lspconfig.jedi_language_server.setup {}
 
 -- Global mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions

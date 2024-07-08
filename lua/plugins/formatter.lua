@@ -43,9 +43,21 @@ require("formatter").setup {
         require("formatter.filetypes.cpp").clangformat
     },
 
+    c = {
+        require("formatter.filetypes.cpp").clangformat
+    },
+
     go = {
         require("formatter.filetypes.go").gofumpt,
         require("formatter.filetypes.go").goimports
+    },
+
+    cmake = {
+        require("formatter.filetypes.cmake").cmakeformat
+    },
+
+    python = {
+        require("formatter.filetypes.python").black
     },
 
     -- Use the special "*" filetype for defining formatter configurations on

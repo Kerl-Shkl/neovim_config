@@ -1,3 +1,5 @@
+vim.deprecate = function() end
+
 -- Basic
 require('core.plugins')
 require('core.mappings')
@@ -20,6 +22,7 @@ require('plugins.comment')
 require('plugins.luasnip')
 require('plugins.floaterm')
 require('plugins.mytry')
+-- require('plugins.linting')
 -- require('plugins.gonvim')
 
 SetCMakeMaps = require('plugins.floaterm').SetCMakeMaps
