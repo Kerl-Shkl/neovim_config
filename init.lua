@@ -22,6 +22,7 @@ require('plugins.comment')
 require('plugins.luasnip')
 require('plugins.floaterm')
 require('plugins.mytry')
+require('plugins.bookmarks')
 -- require('plugins.linting')
 -- require('plugins.gonvim')
 

@@ -62,6 +62,7 @@ require("lazy").setup({
     },
     { 'voldikss/vim-floaterm'},
     { 'google/vim-searchindex' },
+    { 'chentoast/marks.nvim' },
     -- {
     --     'mfussenegger/nvim-lint',
     --     event = {"BufReadPre", "BufNewFile"},
