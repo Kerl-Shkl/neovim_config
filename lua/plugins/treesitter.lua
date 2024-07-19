@@ -19,4 +19,3 @@ require'nvim-treesitter.configs'.setup {
     -- disable = { "c", "rust" },
   },
 }
-
