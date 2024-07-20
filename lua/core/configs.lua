@@ -36,6 +36,15 @@ vim.cmd([[
 
 vim.opt.exrc = true
 
+-- For change layout use i_CTRL_^
+vim.opt.keymap = "russian-jcukenwin"
+vim.opt.iminsert = 0
+vim.opt.imsearch = 0
+vim.cmd([[
+    highlight lCursor guifg=NONE guibg=Cyan
+]])
+
+
 -- vim.opt.foldmethod = "expr"
 -- vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
 -- vim.opt.nofoldenable = true
