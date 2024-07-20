@@ -42,7 +42,16 @@ require("formatter").setup {
     cpp = {
         require("formatter.filetypes.cpp").clangformat
     },
-
+    asm = {
+        function() 
+            return {
+                exe = "asmfmt",
+                args = {},
+                stdin = false,
+                try_node_modules=false;
+            }
+        end
+    },
     go = {
         require("formatter.filetypes.go").gofumpt,
         require("formatter.filetypes.go").goimports
