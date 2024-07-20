@@ -4,7 +4,7 @@ local util = require "formatter.util"
 -- Provides the Format, FormatWrite, FormatLock, and FormatWriteLock commands
 require("formatter").setup {
   -- Enable or disable logging
-  logging = true,
+  logging = false,
   -- Set the log level
   log_level = vim.log.levels.WARN,
   -- All formatter configurations are opt-in
@@ -42,6 +42,7 @@ require("formatter").setup {
     cpp = {
         require("formatter.filetypes.cpp").clangformat
     },
+
     asm = {
         function() 
             return {
@@ -52,9 +53,22 @@ require("formatter").setup {
             }
         end
     },
+
+    c = {
+        require("formatter.filetypes.cpp").clangformat
+    },
+
     go = {
         require("formatter.filetypes.go").gofumpt,
         require("formatter.filetypes.go").goimports
+    },
+
+    cmake = {
+        require("formatter.filetypes.cmake").cmakeformat
+    },
+
+    python = {
+        require("formatter.filetypes.python").black
     },
 
     -- Use the special "*" filetype for defining formatter configurations on

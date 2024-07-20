@@ -40,4 +40,8 @@ return {
     ]], { i(1), d(2, get_visual), }),
     {condition = line_begin}
     ),
+    s(
+        {trig="v!", dscr="monospace", snippetType="autosnippet"},
+        fmt([[```{}```]], d(1, utils.get_visual))
+    ),
 }

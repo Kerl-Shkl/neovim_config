@@ -11,7 +11,7 @@ vim.opt.smartindent = true
 -- Line Numbers
 vim.opt.number = true
 vim.wo.number = true
--- vim.opt.relativenumber = true
+vim.opt.relativenumber = true
 
 -- Fillchars
 vim.opt.fillchars = {
