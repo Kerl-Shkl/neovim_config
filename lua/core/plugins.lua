@@ -63,4 +63,5 @@ require("lazy").setup({
     { 'voldikss/vim-floaterm'},
     { 'google/vim-searchindex' },
     { 'chentoast/marks.nvim' },
+    { 'tpope/vim-fugitive' }
 })
