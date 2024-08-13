@@ -63,5 +63,16 @@ require("lazy").setup({
     { 'voldikss/vim-floaterm'},
     { 'google/vim-searchindex' },
     { 'chentoast/marks.nvim' },
-    { 'tpope/vim-fugitive' }
+    { 'tpope/vim-fugitive' },
+    {
+        "hedyhli/outline.nvim",
+        lazy = true,
+        cmd = { "Outline", "OutlineOpen" },
+        keys = { -- Example mapping to toggle outline
+            { "<leader>o", "<cmd>Outline!<CR>", desc = "Toggle outline" },
+        },
+        opts = {
+            -- Your setup opts here
+        },
+    },
 })

@@ -23,6 +23,7 @@ require('plugins.luasnip')
 require('plugins.floaterm')
 require('plugins.mytry')
 require('plugins.bookmarks')
+require('plugins.outline')
 -- require('plugins.gonvim')
 
 SetCMakeMaps = require('plugins.floaterm').SetCMakeMaps
