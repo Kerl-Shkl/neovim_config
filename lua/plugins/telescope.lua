@@ -1,9 +1,9 @@
 require('telescope').setup{
   defaults = {
     file_ignore_patterns = {
-      "build",
-      "Debug",
-      "Build"
+      "build/",
+      "Debug/",
+      "Build/"
     }
   }
 }
