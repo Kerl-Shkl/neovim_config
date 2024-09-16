@@ -1,5 +1,6 @@
 -- Setup language servers.
 local lspconfig = require('lspconfig')
+lspconfig.jsonls.setup {}
 lspconfig.clangd.setup {}
 lspconfig.cmake.setup {}
 util = require "lspconfig/util"
