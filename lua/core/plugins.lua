@@ -76,5 +76,6 @@ require("lazy").setup({
         },
     },
     { 'kevinhwang91/nvim-ufo', dependencies = { 'kevinhwang91/promise-async' }, },
-    { "luukvbaal/statuscol.nvim" }
+    { "luukvbaal/statuscol.nvim" },
+    { "lewis6991/gitsigns.nvim" }
 })

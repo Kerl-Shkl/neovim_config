@@ -27,5 +27,6 @@ require('plugins.outline')
 -- require('plugins.gonvim')
 require('plugins.ufo')
 require('plugins.statuscol')
+require('plugins.gitsigns')
 
 SetCMakeMaps = require('plugins.floaterm').SetCMakeMaps

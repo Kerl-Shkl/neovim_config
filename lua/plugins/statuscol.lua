@@ -12,13 +12,17 @@ require("statuscol").setup({
     bt_ignore = nil,       -- lua table with 'buftype' values for which 'statuscolumn' will be unset
     -- Default segments (fold -> sign -> line number + separator), explained below
     segments = {
-        { text = { "%s" }, click = "v:lua.ScSa" },
+        {
+            sign = { namespace = { "diagnostic" }, maxwidth = 1, auto = true },
+            click = "v:lua.ScSa"
+        },
         { text = {builtin.foldfunc}, click = "v:lua.ScFa" },
         {
             text = { builtin.lnumfunc, " " },
             condition = { true, builtin.not_empty },
             click = "v:lua.ScLa",
         },
+        -- { text = { "%s" }, click = "v:lua.ScSa" },
     },
     clickmod = "c",         -- modifier used for certain actions in the builtin clickhandlers:
     -- "a" for Alt, "c" for Ctrl and "m" for Meta.
