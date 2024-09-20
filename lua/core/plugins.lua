@@ -75,4 +75,5 @@ require("lazy").setup({
             -- Your setup opts here
         },
     },
+    { 'kevinhwang91/nvim-ufo', dependencies = { 'kevinhwang91/promise-async' }, },
 })

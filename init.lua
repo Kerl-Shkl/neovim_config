@@ -25,5 +25,6 @@ require('plugins.mytry')
 require('plugins.bookmarks')
 require('plugins.outline')
 -- require('plugins.gonvim')
+require('plugins.ufo')
 
 SetCMakeMaps = require('plugins.floaterm').SetCMakeMaps
