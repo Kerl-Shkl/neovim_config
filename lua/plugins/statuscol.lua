@@ -16,17 +16,16 @@ require("statuscol").setup({
             sign = { namespace = { "diagnostic" }, maxwidth = 1, auto = true },
             click = "v:lua.ScSa"
         },
+        -- {
+        --     sign = { namespace = {'gitsign'}, maxwidth = 1, auto = true },
+        --     click = 'v:lua.ScSa'
+        -- },
         { text = {builtin.foldfunc}, click = "v:lua.ScFa" },
         {
             text = { builtin.lnumfunc, " " },
             condition = { true, builtin.not_empty },
             click = "v:lua.ScLa",
         },
-        {
-            sign = { namespace = {'gitsign'}, maxwidth = 1, auto = true },
-            click = 'v:lua.ScSa'
-        },
-        -- { text = { "%s" }, click = "v:lua.ScSa" },
     },
     clickmod = "c",         -- modifier used for certain actions in the builtin clickhandlers:
     -- "a" for Alt, "c" for Ctrl and "m" for Meta.
