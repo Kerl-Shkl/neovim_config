@@ -60,7 +60,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
 vim.keymap.set('n', '<F4>', ':ClangdSwitchSourceHeader<CR>')
 vim.diagnostic.config({ virtual_text = false, virtual_improved = { current_line ='only', }, })
 
-local _border = "single"
+local _border = "double"
 
 vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(
   vim.lsp.handlers.hover, {
