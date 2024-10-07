@@ -76,5 +76,12 @@ require("lazy").setup({
     },
     { 'kevinhwang91/nvim-ufo', dependencies = { 'kevinhwang91/promise-async' }, },
     { "luukvbaal/statuscol.nvim" },
-    { "lewis6991/gitsigns.nvim" }
+    { "lewis6991/gitsigns.nvim" },
+    {
+        "lukas-reineke/indent-blankline.nvim",
+        main = "ibl",
+        ---@module "ibl"
+        ---@type ibl.config
+        opts = {},
+    }
 })

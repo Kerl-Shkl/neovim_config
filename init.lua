@@ -28,5 +28,6 @@ require('plugins.outline')
 require('plugins.ufo')
 require('plugins.statuscol')
 require('plugins.gitsigns')
+require('plugins.indentline')
 
 SetCMakeMaps = require('plugins.floaterm').SetCMakeMaps
