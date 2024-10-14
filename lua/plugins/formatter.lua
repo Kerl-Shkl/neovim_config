@@ -44,7 +44,7 @@ require("formatter").setup {
     },
 
     asm = {
-        function() 
+        function()
             return {
                 exe = "asmfmt",
                 args = {},
@@ -69,6 +69,17 @@ require("formatter").setup {
 
     python = {
         require("formatter.filetypes.python").black
+    },
+
+    sh = {
+        function()
+            return {
+                exe = "shfmt",
+                args = {'--indent=4'},
+                stdin=true,
+                try_node_modules=false
+            }
+        end
     },
 
     -- Use the special "*" filetype for defining formatter configurations on

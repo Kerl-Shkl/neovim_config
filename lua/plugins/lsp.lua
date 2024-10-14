@@ -1,8 +1,9 @@
 -- Setup language servers.
 local lspconfig = require('lspconfig')
-lspconfig.jsonls.setup {}
-lspconfig.clangd.setup {}
-lspconfig.cmake.setup {}
+lspconfig.jsonls.setup{}
+lspconfig.clangd.setup{}
+lspconfig.cmake.setup{}
+lspconfig.bashls.setup{}
 util = require "lspconfig/util"
 lspconfig.gopls.setup {
     cmd = {"gopls", "serve"},
