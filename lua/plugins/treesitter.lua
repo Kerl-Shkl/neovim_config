@@ -1,7 +1,4 @@
-require'nvim-treesitter.configs'.setup {
-  -- A list of parser names, or "all" (the five listed parsers should always be installed)
-  ensure_installed = { "c", "cpp", "cmake", "python", "nasm", "lua"},
-
+require("nvim-treesitter.configs").setup({
   -- Install parsers synchronously (only applied to `ensure_installed`)
   sync_install = false,
 
@@ -18,5 +15,10 @@ require'nvim-treesitter.configs'.setup {
     -- list of language that will be disabled
     -- disable = { "c", "rust" },
   },
-}
+  autotag = {
+    enable = true,
+  },
+})
+require("nvim-treesitter.install").prefer_git = true
+
 vim.treesitter.language.register("nasm", "asm")
