@@ -4,7 +4,6 @@ vim.deprecate = function() end
 require('core.plugins')
 require('core.mappings')
 require('core.colors')
-require('core.configs')
 
 -- Plugins
 require('plugins.neotree')
@@ -29,5 +28,8 @@ require('plugins.ufo')
 require('plugins.statuscol')
 require('plugins.gitsigns')
 require('plugins.indentline')
+
+-- Custom
+require('core.configs')
 
 SetCMakeMaps = require('plugins.floaterm').SetCMakeMaps
