@@ -36,6 +36,10 @@ function MyGruvbox()
 
     vim.api.nvim_set_hl(0, "TabLineSel", {fg=colors.light_blue, standout=true})
     vim.api.nvim_set_hl(0, "TabLineFill", {link = "TabLine"})
+
+    vim.api.nvim_set_hl(0, "Added", {fg="#689d6a"})
+    vim.api.nvim_set_hl(0, "Removed", {fg="#cc241d"})
+    vim.api.nvim_set_hl(0, "Changed", {fg="#eebd35"})
 end
 
 function SetColor(color)
