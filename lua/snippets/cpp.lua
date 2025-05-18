@@ -1,8 +1,9 @@
 require("luasnip.loaders.from_lua").lazy_load()
-local utils = require "snippets.utils"
+local utils = require("snippets.utils")
 local get_visual = utils.get_visual
 local line_begin = require("luasnip.extras.expand_conditions").line_begin
 
+-- stylua: ignore start
 return {
 
 s(
@@ -47,6 +48,12 @@ s(
     fmt([[
         template <typename {}>
     ]], {i(1, "T")})
+),
+
+s(
+    {trig="lam", dscr="lambda"},
+    fmta([[[<>](<>){<>}]], {i(1), i(2), i(3)})
 )
 
 }
+-- stylua: ignore end
