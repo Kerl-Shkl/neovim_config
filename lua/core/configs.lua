@@ -44,7 +44,17 @@ vim.cmd([[
     highlight lCursor guifg=NONE guibg=Cyan
 ]])
 
+local git_compare = function(opts)
+    base = "HEAD~1"
+    if opts.args and opts.args ~= ""  then
+        base = opts.args
+    end
+    vim.cmd('Neotree right git_status git_base='..base)
+    require('gitsigns').change_base(base, true)
+end
 
--- vim.opt.foldmethod = "expr"
--- vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
--- vim.opt.nofoldenable = true
+vim.api.nvim_create_user_command("GitCompare", git_compare, {
+    nargs = "?",
+    desc = "Create env like in Pull Request diff",
+    bang = false,
+})

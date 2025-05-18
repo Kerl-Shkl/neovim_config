@@ -5,7 +5,7 @@ function MyGruvbox()
     vim.g.gruvbox_baby_color_overrides = {
         red = "#d75f5f"
     }
-	vim.cmd.colorscheme("gruvbox-baby")
+    vim.cmd.colorscheme("gruvbox-baby")
     vim.api.nvim_set_hl(0, "@function", {fg=colors.bright_yellow, bold=true})
     vim.api.nvim_set_hl(0, "@lsp.type.function", {link="@function"})
     vim.api.nvim_set_hl(0, "@function.call", {fg=colors.bright_yellow, italic=true})
@@ -16,7 +16,7 @@ function MyGruvbox()
     vim.api.nvim_set_hl(0, "@type.builtin", {fg = colors.soft_yellow})
     vim.api.nvim_set_hl(0, "@lsp.mod.constructorOrDestructor.cpp", {link = "@function"})
     vim.api.nvim_set_hl(0, "@constructor.cpp", {link = "@function"})
-    vim.api.nvim_set_hl(0, "@lsp.type.variable", {fg=colors.light_blue})
+    vim.api.nvim_set_hl(0, "@lsp.type.variable", {fg=colors.light_blue, bold=false, force=true})
     vim.api.nvim_set_hl(0, "@lsp.type.parameter", {link = "@lsp.type.variable"})
     vim.api.nvim_set_hl(0, "@field", {fg=colors.light_blue, underdashed=true})
     vim.api.nvim_set_hl(0, "@lsp.type.property", {link="@field"})
@@ -36,10 +36,14 @@ function MyGruvbox()
 
     vim.api.nvim_set_hl(0, "TabLineSel", {fg=colors.light_blue, standout=true})
     vim.api.nvim_set_hl(0, "TabLineFill", {link = "TabLine"})
+
+    vim.api.nvim_set_hl(0, "Added", {fg="#689d6a"})
+    vim.api.nvim_set_hl(0, "Removed", {fg="#cc241d"})
+    vim.api.nvim_set_hl(0, "Changed", {fg="#eebd35"})
 end
 
 function SetColor(color)
-	color = color or "MyGruvbox"
+    color = color or "MyGruvbox"
 
     if color == "MyGruvbox" then
         MyGruvbox()
