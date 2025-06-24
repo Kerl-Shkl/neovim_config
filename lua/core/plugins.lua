@@ -35,7 +35,7 @@ require("lazy").setup({
     {
         "nvim-telescope/telescope.nvim",
         branch = "master",
-        dependencies = { "nvim-lua/plenary.nvim" },
+        dependencies = { "nvim-lua/plenary.nvim", "nvim-telescope/telescope-live-grep-args.nvim" },
     },
     { "tpope/vim-surround" },
     { "tpope/vim-unimpaired" },

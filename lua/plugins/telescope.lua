@@ -1,12 +1,30 @@
-require('telescope').setup{
+local telescope = require("telescope")
+local lga_actions = require("telescope-live-grep-args.actions")
+
+telescope.setup{
   defaults = {
     file_ignore_patterns = {
       "build/",
       "Debug/",
       "Build/"
     }
+  },
+  extensions = {
+    live_grep_args = {
+      auto_quoting = true, -- enable/disable auto-quoting
+      -- define mappings, e.g.
+      mappings = { -- extend mappings
+        i = {
+          ["<C-k>"] = lga_actions.quote_prompt(),
+          ["<C-i>"] = lga_actions.quote_prompt({ postfix = " --iglob " }),
+        },
+      },
+    }
   }
 }
+
+telescope.load_extension("live_grep_args")
+vim.keymap.set("n", "<leader>fg", ":lua require('telescope').extensions.live_grep_args.live_grep_args()<CR>")
 
 local builtin = require('telescope.builtin')
 vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
