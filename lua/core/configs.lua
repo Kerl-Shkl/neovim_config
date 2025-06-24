@@ -36,6 +36,15 @@ vim.cmd([[
 
 vim.opt.exrc = true
 
+
+-- Don't include leading whitespace
+vim.cmd([[
+    onoremap a' 2i'
+    onoremap a" 2i"
+    xnoremap a' 2i'
+    xnoremap a" 2i"
+]])
+
 -- For change layout use i_CTRL_^
 vim.opt.keymap = "russian-jcukenwin"
 vim.opt.iminsert = 0
