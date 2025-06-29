@@ -22,10 +22,10 @@ vim.opt.fillchars = {
     msgsep = "‾",
     foldopen = "▾",
     foldsep = "│",
-    foldclose = "▸"
+    foldclose = "▸",
 }
 
-vim.opt.colorcolumn = '80'
+vim.opt.colorcolumn = "80"
 vim.opt.scrolloff = 2
 
 vim.cmd([[
@@ -55,11 +55,11 @@ vim.cmd([[
 
 local git_compare = function(opts)
     base = "HEAD~1"
-    if opts.args and opts.args ~= ""  then
+    if opts.args and opts.args ~= "" then
         base = opts.args
     end
-    vim.cmd('Neotree right git_status git_base='..base)
-    require('gitsigns').change_base(base, true)
+    vim.cmd("Neotree right git_status git_base=" .. base)
+    require("gitsigns").change_base(base, true)
 end
 
 vim.api.nvim_create_user_command("GitCompare", git_compare, {
