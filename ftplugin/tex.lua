@@ -5,6 +5,9 @@ vim.opt.tabstop = 2
 vim.opt.softtabstop = 2
 vim.opt.smartindent = true
 
+vim.opt.spell = true
+vim.opt.spelllang = { "en_us", "ru_ru" }
+
 vim.cmd([[
     let g:vimtex_imaps_enabled=0
     let g:vimtex_view_forward_search_on_start=0
