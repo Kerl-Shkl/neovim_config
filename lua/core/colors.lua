@@ -16,35 +16,45 @@ function sensibleHighlightning()
     -- highlights
     vim.api.nvim_set_hl(0, "@type", { fg = colors.clean_green })
     vim.api.nvim_set_hl(0, "@type.builtin", { link = "@type" })
-    vim.api.nvim_set_hl(0, "@number", { fg = colors.milk })
+
+    vim.api.nvim_set_hl(0, "@number", { fg = colors.foreground })
     vim.api.nvim_set_hl(0, "@boolean", { link = "@number" })
+
     vim.api.nvim_set_hl(0, "@variable", { fg = colors.foreground })
     vim.api.nvim_set_hl(0, "@variable.member", { link = "@variable" })
     vim.api.nvim_set_hl(0, "@variable.parameter", { link = "@variable" })
     vim.api.nvim_set_hl(0, "@property", { link = "@variable.member" })
+
     vim.api.nvim_set_hl(0, "@function", { fg = colors.foreground })
     vim.api.nvim_set_hl(0, "@function.call", { link = "@function" })
     vim.api.nvim_set_hl(0, "@function.builtin", { link = "@function" })
     vim.api.nvim_set_hl(0, "@function.method", { link = "@function" })
     vim.api.nvim_set_hl(0, "@function.method.call", { link = "@function.call" })
     vim.api.nvim_set_hl(0, "@constructor", { link = "@function" })
+
     vim.api.nvim_set_hl(0, "@keyword", { fg = colors.blue_gray })
+    vim.api.nvim_set_hl(0, "@noexcept", { link = "@keyword" })
     vim.api.nvim_set_hl(0, "@keyword.function", { link = "@keyword" })
     vim.api.nvim_set_hl(0, "@keyword.operator", { link = "@keyword" })
+    vim.api.nvim_set_hl(0, "@keyword.class.modifier", { link = "@keyword" })
     vim.api.nvim_set_hl(0, "@attribute.cpp", { link = "@keyword" })
     vim.api.nvim_set_hl(0, "@module", { link = "@keyword" })
+
     vim.api.nvim_set_hl(0, "@operator", { fg = colors.milk })
     vim.api.nvim_set_hl(0, "@keyword.operator", { link = "@operator" })
-    vim.api.nvim_set_hl(0, "@keyword.modifier", { link = "@operator" })
     vim.api.nvim_set_hl(0, "@comment", { fg = colors.soft_yellow })
     vim.api.nvim_set_hl(0, "@constant", { fg = colors.milk })
     vim.api.nvim_set_hl(0, "@constant.builtin", { link = "@constant" })
+
+    vim.api.nvim_set_hl(0, "@keyword.modifier", { link = "@type" })
+    vim.api.nvim_set_hl(0, "@refdecl", { link = "@type" })
 
     vim.api.nvim_set_hl(0, "@markup.heading.gitcommit", { fg = colors.orange })
 
     vim.api.nvim_set_hl(0, "Added", { fg = "#689d6a" })
     vim.api.nvim_set_hl(0, "Removed", { fg = "#cc241d" })
     vim.api.nvim_set_hl(0, "Changed", { fg = "#eebd35" })
+    vim.api.nvim_set_hl(0, "Underlined", { fg = colors.light_blue, underline = true })
 end
 
 function MyGruvbox()
