@@ -87,6 +87,7 @@ vim.diagnostic.config({
     virtual_text = false,
     virtual_improved = { current_line = "only" },
     severity_sort = true,
+    underline = false,
 })
 
 local _border = "double"
