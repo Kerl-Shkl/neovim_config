@@ -3,11 +3,8 @@
 
 ((noexcept) @noexcept (#set! priority 105))
 
-(reference_declarator
-[
-  "&"
-  "&&"
-] @refdecl (#set! priority 105))
+(reference_declarator ["&" "&&"] @refdecl (#set! priority 105))
+(abstract_reference_declarator ["&" "&&"] @refdecl (#set! priority 105))
 
 [
   "public"
