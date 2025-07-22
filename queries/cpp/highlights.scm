@@ -5,6 +5,8 @@
 
 (reference_declarator ["&" "&&"] @refdecl (#set! priority 105))
 (abstract_reference_declarator ["&" "&&"] @refdecl (#set! priority 105))
+(pointer_declarator "*" @refdecl (#set! priority 105))
+(abstract_pointer_declarator "*" @refdecl (#set! priority 105))
 
 [
   "public"
