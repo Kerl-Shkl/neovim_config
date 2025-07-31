@@ -37,6 +37,7 @@ function sensibleHighlightning()
     vim.api.nvim_set_hl(0, "@keyword.function", { link = "@keyword" })
     vim.api.nvim_set_hl(0, "@keyword.operator", { link = "@keyword" })
     vim.api.nvim_set_hl(0, "@keyword.class.modifier", { link = "@keyword" })
+    vim.api.nvim_set_hl(0, "@keyword.directive", { link = "@keyword" })
     vim.api.nvim_set_hl(0, "@attribute.cpp", { link = "@keyword" })
     vim.api.nvim_set_hl(0, "@module", { link = "@keyword" })
 
