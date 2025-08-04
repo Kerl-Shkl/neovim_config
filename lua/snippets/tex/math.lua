@@ -201,10 +201,4 @@ return {
         { t("^3") },
         { condition = in_mathzone }
     ),
-    -- Not working now
-    -- s(
-    --     {trig="((%d+)|(%d*)(\\)?(%a+)((^|_)(%{%d+%}|%d))*)/", regTrig=true, snippetType="autosnippet"},
-    --     fmta("\\frac{<>}{<>}", {f(function(_, snip) return snip.captures[1] end), i(1)}),
-    --     {condition = in_mathzone}
-    -- )
 }

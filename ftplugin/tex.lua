@@ -4,6 +4,7 @@ vim.opt.shiftwidth = 2
 vim.opt.tabstop = 2
 vim.opt.softtabstop = 2
 vim.opt.smartindent = true
+vim.opt.textwidth = 80
 
 vim.opt.spell = true
 vim.opt.spelllang = { "en_us", "ru_ru" }

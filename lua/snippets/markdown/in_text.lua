@@ -9,7 +9,10 @@ return {
     s({ trig = "bf", dscr = "Bold" }, fmta([[**<>**]], d(1, utils.get_visual))),
 
     s({ trig = "uu", dscr = "Underlined" }, fmt([[<u>{}</u>]], d(1, utils.get_visual))),
-    s({ trig = "mk", dscr = "inline math", snippetType = "autosnippet" }, fmt([[${}$]], d(1, utils.get_visual))),
+    s(
+        { trig = "mk", dscr = "inline math", snippetType = "autosnippet", wordTrig = true },
+        fmt([[${}$]], d(1, utils.get_visual))
+    ),
     s(
         { trig = "dm", dscr = "Math", snippetType = "autosnippet" },
         fmta(
