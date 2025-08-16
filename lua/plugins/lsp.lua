@@ -45,9 +45,17 @@ vim.api.nvim_create_autocmd("LspAttach", {
 
         -- Buffer local mappings.
         -- See `:help vim.lsp.*` for documentation on any of the below functions
+
+        declaration_wrap = function()
+            return vim.lsp.buf.declaration({ reuse_win = true })
+        end
+        definition_wrap = function()
+            return vim.lsp.buf.definition({ reuse_win = true })
+        end
+
         local opts = { buffer = ev.buf }
-        vim.keymap.set("n", "gD", vim.lsp.buf.declaration, opts)
-        vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
+        vim.keymap.set("n", "gD", declaration_wrap, opts)
+        vim.keymap.set("n", "gd", definition_wrap, opts)
         vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
         vim.keymap.set("n", "gi", vim.lsp.buf.implementation, opts)
         vim.keymap.set("n", "<C-k>", vim.lsp.buf.signature_help, opts)
@@ -66,17 +74,20 @@ vim.api.nvim_create_autocmd("LspAttach", {
     end,
 })
 
-vim.keymap.set('n', '<F4>', ':ClangdSwitchSourceHeader<CR>')
+vim.keymap.set("n", "<F4>", ":ClangdSwitchSourceHeader<CR>")
 vim.diagnostic.config({
-    signs =  {
+    signs = {
         text = {
             [vim.diagnostic.severity.ERROR] = " ",
-            [vim.diagnostic.severity.WARN]  = " ",
-            [vim.diagnostic.severity.INFO]  = " ",
-            [vim.diagnostic.severity.HINT]  = "󰌵",
+            [vim.diagnostic.severity.WARN] = " ",
+            [vim.diagnostic.severity.INFO] = " ",
+            [vim.diagnostic.severity.HINT] = "󰌵",
         },
     },
-    virtual_text = false, virtual_improved = { current_line = "only" }, severity_sort = true })
+    virtual_text = false,
+    virtual_improved = { current_line = "only" },
+    severity_sort = true,
+})
 
 local _border = "double"
 
