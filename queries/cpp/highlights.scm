@@ -40,7 +40,4 @@
 
 ; Not interesting comments
 ((comment) @comment.not_interesting
-  (#lua-match? @comment.not_interesting "//$"))
-
-((comment) @comment.not_interesting
-  (#lua-match? @comment.not_interesting "// ?NOLINT"))
+  (#vim-match? @comment.not_interesting "\(//$\|// ?NOLINT\|// clang-format\)"))

@@ -25,22 +25,22 @@ telescope.setup({
     pickers = {
         buffers = {
             mappings = {
-                i = { ["<CR>"] = actions.select_tab_drop },
+                i = { ["<CR>"] = actions.select_drop },
             },
         },
         find_files = {
             mappings = {
-                i = { ["<CR>"] = actions.select_tab_drop },
+                i = { ["<CR>"] = actions.select_drop },
             },
         },
         git_files = {
             mappings = {
-                i = { ["<CR>"] = actions.select_tab_drop },
+                i = { ["<CR>"] = actions.select_drop },
             },
         },
         old_files = {
             mappings = {
-                i = { ["<CR>"] = actions.select_tab_drop },
+                i = { ["<CR>"] = actions.select_drop },
             },
         },
     },
