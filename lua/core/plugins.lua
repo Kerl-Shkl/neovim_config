@@ -94,5 +94,6 @@ require("lazy").setup({
         ---@type ibl.config
         opts = {},
     },
-    { "https://github.com/windwp/nvim-ts-autotag" },
+    { "windwp/nvim-ts-autotag" },
+    { "hiphish/rainbow-delimiters.nvim" },
 })

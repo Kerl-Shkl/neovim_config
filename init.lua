@@ -29,6 +29,7 @@ require("plugins.statuscol")
 require("plugins.gitsigns")
 require("plugins.indentline")
 require("plugins.autotag")
+require("plugins.rainbow-delimiters")
 
 -- Custom
 require('core.configs')

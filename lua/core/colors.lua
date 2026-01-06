@@ -58,7 +58,6 @@ function sensibleHighlightning()
 
     vim.api.nvim_set_hl(0, "@markup.heading.gitcommit", { fg = colors.orange })
 
-    vim.api.nvim_set_hl(0, "@lambda_declare_punct", { sp = "#FF0000"})
     vim.api.nvim_set_hl(0, "@folly_cont", { fg = colors.light_blue })
     vim.api.nvim_set_hl(0, "@folly_cont_braces", { link = "@folly_cont" })
 
@@ -66,7 +65,6 @@ function sensibleHighlightning()
     vim.api.nvim_set_hl(0, "Removed", { fg = "#cc241d" })
     vim.api.nvim_set_hl(0, "Changed", { fg = "#eebd35" })
     vim.api.nvim_set_hl(0, "Underlined", { fg = colors.light_blue, underline = true })
-
 end
 
 function MyGruvbox()

@@ -16,10 +16,6 @@
   "virtual"
 ] @keyword.class.modifier
 
-(lambda_capture_specifier ["[" "]"] @lambda_declare_punct (#set! priority 105))
-(lambda_expression (compound_statement ["{" "}"] @lambda_declare_punct (#set! priority 105)))
-(lambda_declarator (parameter_list ["(" ")"] @lambda_declare_punct (#set! priority 105)))
-
 ; folly queryies
 (call_expression
     ((field_expression (field_identifier) @folly_cont (#any-of? @folly_cont
