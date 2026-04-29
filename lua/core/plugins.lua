@@ -23,7 +23,7 @@ require("lazy").setup({
         },
     },
 
-    { "nvim-treesitter/nvim-treesitter" },
+    { "nvim-treesitter/nvim-treesitter", branch = "main", lazy = false, build = ":TSUpdate" },
     { "neovim/nvim-lspconfig" },
     { "luisiacc/gruvbox-baby", branch = "main" },
     { "hrsh7th/cmp-nvim-lsp" },
