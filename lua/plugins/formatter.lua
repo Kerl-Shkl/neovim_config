@@ -47,6 +47,10 @@ require("formatter").setup({
             require("formatter.filetypes.cpp").clangformat,
         },
 
+        yaml = {
+            require("formatter.filetypes.yaml").yamlfmt,
+        },
+
         asm = {
             function()
                 return {
